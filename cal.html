@@ -1,0 +1,180 @@
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+      body{
+        background-color: rgb(121, 45, 45);
+      }
+      input[type="text"]{
+        height:2cm;
+        width:8cm;
+        text-align: end;
+        margin-bottom:10px;
+        background-color: rgb(255, 255, 255);
+        padding-top: 50px;
+        margin-top: 10px;
+        font-family: monospace;
+      font-weight: 900;
+      font-size:30;
+      color:rgb(0, 75, 82);
+      box-shadow: 5px 5px 10px black;
+      }
+      button{
+        width:2cm;
+        height:2cm;
+        background-color: rgb(140, 0, 0);
+        color:white;
+        border-radius: 10px;
+        margin:4px;
+        font-family: monospace;
+      font-weight: 900;
+      box-shadow:5px 5px 10px black;
+      border:none;
+      }
+     button:hover{
+      background-color: white;
+      color:rgb(140, 0, 0);
+     }
+     .total{
+      width:10cm;
+      text-align: center;
+      background-color: rgb(248, 101, 101);
+      margin:auto;
+      margin-top: 3cm;
+      font-family: monospace;
+      font-weight: 900;
+      border-radius: 20px;
+      height:13cm;
+     }
+     .textfun{
+      font-size: 40;
+     }
+    </style>
+  </head>
+  <body>
+    <div class="total">
+    <input type="text" value=""  id="display"  disabled>
+    <div>
+      <button id="one"  value="1" onclick="onee()">1</button>
+      <button id="two" value="2" onclick="twoo()">2</button>
+      <button id="three" value="3" onclick="threee()">3</button>
+      <button id="sum" onclick="summition()" value="1">+</button>
+    </div>
+
+    <div>
+      <button id="four"  value="4" onclick="fourr()">4</button>
+      <button id="five" value="5" onclick="fivee()">5</button>
+      <button id="six" value="6" onclick="sixx()">6</button>
+      <button id="sub" onclick="substraction()" value="2">-</button>
+    </div>
+    <div>
+      <button id="seven"  value="7" onclick="sevenn()">7</button>
+      <button id="eight" value="8" onclick="eightt()">8</button>
+      <button id="nine" value="9" onclick="ninee()">9</button>
+      <button id="zero" value="0" onclick="zeroo()">0</button>
+      <button id="total" onclick="totall()">=</button>
+      <button id="clear" onclick="clearr()">Clear</button>
+      <button id="mul" onclick="multiplication()">x</button>
+      <button id="divsion" onclick="division()">\</button>
+    </div>
+    <div class="textfun">Calculator</div>
+    </div>
+  </body>
+  <script>
+    var c=0,d=0;
+    var x=0;
+    var varible=0;
+    function onee(){
+      var a=document.getElementById('one').value;
+      var b=document.getElementById('display').value;
+      document.getElementById('display').value=b+a;
+    }
+    function twoo(){
+      var a=document.getElementById('two').value;
+      var b=document.getElementById('display').value;
+      document.getElementById('display').value=b+a;
+    }
+    function threee(){
+      var a=document.getElementById('three').value;
+      var b=document.getElementById('display').value;
+      document.getElementById('display').value=b+a;
+    }
+    function fourr(){
+      var a=document.getElementById('four').value;
+      var b=document.getElementById('display').value;
+      document.getElementById('display').value=b+a;
+    }
+    function fivee(){
+      var a=document.getElementById('five').value;
+      var b=document.getElementById('display').value;
+      document.getElementById('display').value=b+a;
+    }
+    function sixx(){
+      var a=document.getElementById('six').value;
+      var b=document.getElementById('display').value;
+      document.getElementById('display').value=b+a;
+    }
+    function sevenn(){
+      var a=document.getElementById('seven').value;
+      var b=document.getElementById('display').value;
+      document.getElementById('display').value=b+a;
+    }
+    function eightt(){
+      var a=document.getElementById('eight').value;
+      var b=document.getElementById('display').value;
+      document.getElementById('display').value=b+a;
+    }
+    function ninee(){
+      var a=document.getElementById('nine').value;
+      var b=document.getElementById('display').value;
+      document.getElementById('display').value=b+a;
+    }
+    function zeroo(){
+      var a=document.getElementById('zero').value;
+      var b=document.getElementById('display').value;
+      document.getElementById('display').value=b+a;
+    }
+    function summition(){
+      c=Number(document.getElementById('display').value);
+      document.getElementById('display').value="";
+      varible=1;
+
+    }
+    function substraction(){
+      c=Number(document.getElementById('display').value);
+      document.getElementById('display').value="";
+      varible=2;
+    }
+    function multiplication(){
+      c=Number(document.getElementById('display').value);
+      document.getElementById('display').value="";
+      varible=3;
+    }
+    function division(){
+      c=Number(document.getElementById('display').value);
+      document.getElementById('display').value="";
+      varible=4;
+    }
+    function totall(){
+      d=Number(document.getElementById('display').value);
+      if(varible==1)
+      {
+      document.getElementById('display').value=String(d+c);
+      }
+      else if( varible==2){
+        document.getElementById('display').value=String(c-d);
+      }
+      else if( varible==3){
+        document.getElementById('display').value=String(c*d);
+      }
+      else if( varible==4){
+        document.getElementById('display').value=String(c/d);
+      }
+
+    }
+    function clearr(){
+      document.getElementById('display').value="";
+    }
+
+  </script>
+</html>
